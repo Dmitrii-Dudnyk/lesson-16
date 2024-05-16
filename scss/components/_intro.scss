@@ -1,0 +1,47 @@
+@use "../utils/mixins";
+
+.intro {
+    padding: 20px 0 75px;
+
+    @media screen and (width <= 768px) {
+        padding: 20px 0 40px;
+   }
+
+   @media screen and (width <= 500px) {
+        padding: 20px 0 30px;
+    }
+
+    &__title {
+        margin-bottom: 70px;
+    
+        @media screen and (width <= 768px) {
+            margin-bottom: 30px;
+       }
+    
+        @media screen and (width <= 500px) {
+            margin-left: calc(50% - 110px);
+            margin-bottom: 20px;
+        }
+    }
+
+    &__info {
+        @include mixins.position-content;
+    }
+    
+    &__info-title {
+        margin-bottom: 10px;
+    }
+    
+    &__description {
+        max-width: 470px;
+        margin-left: 50px;
+    }
+}
+
+.button-wrapper {
+    @media screen and (width <= 550px) {
+        display: flex;
+        justify-content: end;
+        margin-top: 15px;
+   }
+}

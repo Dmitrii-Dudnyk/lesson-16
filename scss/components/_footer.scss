@@ -1,0 +1,65 @@
+@use "../utils/mixins";
+
+.footer {
+    padding: 50px 0;
+
+    @media screen and (width <= 768px) {
+        padding: 30px 0;
+    }
+
+    @media screen and (width <= 500px) {
+        padding: 20px 0;
+    }
+}
+
+.footer__action {
+    margin-bottom: 150px;
+    text-align: center;
+
+    @media screen and (width <= 768px) {
+        margin-bottom: 80px;
+    }
+
+    @media screen and (width <= 500px) {
+        margin-bottom: 25px;
+    }
+}
+
+.footer__title {
+    margin-bottom: 50px;
+
+    @media screen and (width <= 768px) {
+        margin-bottom: 25px;
+    }
+
+    @media screen and (width <= 500px) {
+        margin-bottom: 50px;
+    }
+}
+
+.footer__info {
+    @include mixins.position-content;
+
+    @media screen and (width <= 500px) {
+        flex-direction: column;
+    }
+}
+
+.footer__text {
+    @media screen and (width <= 500px) {
+        margin-bottom: 25px;
+    }
+}
+
+.footer__social {
+    display: flex;
+    gap: 40px;
+
+    @media screen and (width <= 768px) {
+        gap: 20px;
+    }
+
+    @media screen and (width <= 500px) {
+        gap: 40px;
+    }
+}

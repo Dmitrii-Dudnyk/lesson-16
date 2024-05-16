@@ -1,0 +1,82 @@
+@use "../utils/mixins";
+
+.expertise {
+    padding-top: 75px;
+
+    @media screen and (width <= 768px) {
+        padding-top: 30px;
+    }
+}
+
+.expertise__title {
+    margin-bottom: 50px;
+
+    @media screen and (width <= 768px) {
+        margin-bottom: 40px;
+    }
+
+    @media screen and (width <= 500px) {
+        margin-bottom: 15px;
+    }
+}
+
+.expertise__list {
+    @include mixins.position-content;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 30px;
+
+    @media screen and (width <= 768px) {
+        gap: 20px;
+    }
+
+    @media screen and (width <= 500px) {
+        gap: 0;
+    }
+}
+
+.expertise__item {
+    position: relative;
+    max-width: 455px;
+    width: calc(50% - 15px);
+    padding-left: 10px;
+    margin-bottom: 50px;
+
+    @media screen and (width <= 768px) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (width <= 500px) {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.expertise__item::before {
+    content: "•";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 1; 
+
+    @media screen and (width <= 768px) {
+        top: 4px;
+    }
+    
+    @media screen and (width <= 500px) {
+        top: 2px;
+    }
+}
+
+
+.expertise__item-title {
+    margin-bottom: 25px;
+
+    @media screen and (width <= 500px) {
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+}

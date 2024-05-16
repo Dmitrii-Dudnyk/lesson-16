@@ -1,0 +1,77 @@
+@use "../utils/variables";
+
+%button {
+    display: inline-block;
+    min-width: max-content;
+    padding: 30px;
+    border: none;
+    border-radius: 145px;
+    font-family: "Roboto", "Poppins";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.button_primary {
+    @extend %button;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: variables.$secondaryColor;
+    background-color: variables.$primaryColor;
+}
+
+.button_secondary {
+    @extend %button;
+    color: variables.$primaryColor;
+    background-color: #F9F9F9;
+    text-transform: uppercase;
+
+    @media screen and (width <= 500px) {
+        padding: 8px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+.simple-button {
+	background-color: transparent;
+	border: none;
+    font-family: "Roboto", "Poppins";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: pointer;
+
+    @media screen and (width <= 768px) {
+        font-size: 14px;
+        line-height: 1.7;
+   }
+}
+
+.simple-button_regular {
+    @extend .simple-button;
+    font-weight: 500;
+}
+
+.arrow-icon {
+    width: 13px;
+    height: 15px;
+    margin-left: 7px;
+    vertical-align: middle;
+    stroke: currentColor;
+    color: variables.$primaryColor;
+
+    &_bottom {
+        margin-bottom: 2px;
+    }
+
+    &_right {
+        transform: rotate(270deg);
+    }
+
+    &_top-right {
+        transform: rotate(225deg);
+        color: variables.$secondaryColor;
+    }
+}

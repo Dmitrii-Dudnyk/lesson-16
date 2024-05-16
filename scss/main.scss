@@ -1,0 +1,44 @@
+@use "./components";
+@use "./utils/variables";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: variables.$primaryColor;
+}
+
+.body {
+	color: variables.$primaryColor;
+	background-color: #fff;
+	font-family: "Roboto", "Poppins";
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.4;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+	    line-height: 1.5;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 14px;
+	    line-height: 1.7;
+    }
+}
+
+.container {
+	width: 100%;
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+}

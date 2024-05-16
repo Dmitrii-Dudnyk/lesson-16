@@ -1,0 +1,31 @@
+@use "../utils/variables";
+
+.ticker {
+    &__wrap {
+        width: 100%;
+        background-color: variables.$primaryColor;
+        overflow: hidden;
+    }
+
+    &__title {
+        display: inline-block;
+        padding: 50px 0;
+        color: variables.$secondaryColor;
+        white-space: nowrap;
+        animation: ticker 10s linear infinite;
+        
+        @media screen and (width <= 768px) {
+            padding: 20px 0;
+        }
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform:  translateX(-100%);
+    }
+}

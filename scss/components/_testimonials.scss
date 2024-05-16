@@ -1,0 +1,70 @@
+@use "../utils/mixins";
+
+.testimonials {
+    padding: 80px 0;
+
+    @media screen and (width <= 768px) {
+        padding: 60px 0 30px;
+    }
+
+    @media screen and (width <= 500px) {
+        padding: 30px 0 15px;
+    }
+
+    &__quote {
+        @include mixins.position-content;
+        align-items: flex-end;
+        gap: 80px;
+    
+        @media screen and (width <= 615px) {
+            gap: 30px;
+        }
+    
+        @media screen and (width <= 500px) {
+            flex-wrap: wrap;
+            gap: 0;
+        }
+    }
+    
+    &__title {
+        margin-bottom: 40px;
+    
+        @media screen and (width <= 500px) {
+            margin-bottom: 30px;
+        }
+    }
+    
+    &__quote-text {
+        max-width: 950px;
+        font-size: 48px;
+        line-height: 1.2;
+    
+        @media screen and (width <= 1250px) {
+            font-size: 3.84vw;
+        }
+    
+        @media screen and (width <= 768px) {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+    
+        @media screen and (width < 500px) {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+    }
+    
+    &__author {
+       white-space: nowrap;
+    }
+    
+    &__author-title {
+        margin-bottom: 10px;
+    
+        @media screen and (width < 500px) {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    }
+}
